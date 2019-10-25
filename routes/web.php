@@ -11,6 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
+
+/*
+Route::get('/about', function () {
+    return view('pages.about');
 });
+
+Route::get('/services', function () {
+    return view('pages.services');
+});*/
+
+/*
+Route::get('/users/{id}/{name}', function ($id,$name) {
+    return 'User ' .$name .' with id = ' .$id;
+});
+
+
+Route::get('/hello', function () {
+    
+    //return 'Hello World!';
+
+    //Regresa un JSon
+    return ['hello' => 'World',
+            'user' => [
+                'name' => 'Chowder'
+            ]
+            ];
+});
+*/
