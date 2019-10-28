@@ -19,6 +19,16 @@ class PagesController extends Controller
 
     public function services()
     {
-        return view('pages.services');
+        $id = request('id');
+        $costo = request('cost');
+        /*$params = array(
+            'id' => $id,
+            'cost' => $costo
+        );*/
+        //return 'Services with id = '. $id. ' and cost = ' . $costo;
+        return view('pages.services',[
+            'id' => $id,
+            'cost' => $costo
+        ]);
     }
 }
