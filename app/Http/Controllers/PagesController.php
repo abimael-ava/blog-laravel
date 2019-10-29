@@ -21,6 +21,7 @@ class PagesController extends Controller
     {
         $id = request('id');
         $costo = request('cost');
+        $data = ['Web Design','Programming','SEO','Marketing'];
         /*$params = array(
             'id' => $id,
             'cost' => $costo
@@ -28,7 +29,8 @@ class PagesController extends Controller
         //return 'Services with id = '. $id. ' and cost = ' . $costo;
         return view('pages.services',[
             'id' => $id,
-            'cost' => $costo
+            'cost' => $costo,
+            'services' => $data
         ]);
     }
 }
